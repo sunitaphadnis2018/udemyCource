@@ -1,0 +1,2 @@
+SELECT Id, Name
+  FROM Car_Type__c

@@ -1,0 +1,23 @@
+<template>
+    
+    <template if:true={carFound}>
+        <lightning-card>
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size = "12">
+                <lightning-tabset active-tab-value={selectedTabValue}>
+                    <lightning-tab label="Car Details"  value="cardetailstab" onactive={tabChangeHandler}>
+                        <c-car-record car={car}></c-car-record>
+                    </lightning-tab>
+                    <lightning-tab label="Add Experience"  value="addExperience" onactive={tabChangeHandler}>
+                
+                    </lightning-tab>
+                    <lightning-tab label="View Experiences" value="viewExperience" onactive={tabChangeHandler}>
+                        
+                    </lightning-tab>
+                </lightning-tabset>
+            </lightning-layout-item>
+        </lightning-layout>
+        </lightning-card>
+    </template>
+
+</template>

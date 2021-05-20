@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Car Search Result 4">
+    <p> Sent from the parent {cartypeid}</p>
+    <lightning-layout multiple-rows horizontal-align="center">
+    <template if:true={foundCars}>
+      <template for:each={carList} for:item="car">
+      <!-- <p key={clist.Id} style="display:inline">
+          <lightning-badge label={clist.Name}></lightning-badge>
+        </p>-->
+        <!--Here add logic to display the Car Tile. Car Tile component will be the child component of
+        the carSearchResult component-->
+        <lightning-layout-item key={car.Id} padding="around-small" size="12" small-device-size="6" large-device-size="3"
+                              medium-device-size="4">
+          <c-car-tile car={car} oncarselected={carSelectedId} car-tile-selected-id={carIdSelected}></c-car-tile>
+        </lightning-layout-item>
+      </template>
+    </template>
+    </lightning-layout>
+    <template if:false={foundCars}>
+      <div class="slds-align_absolute-center">No cars found</div>
+    </template>
+  </lightning-card>  
+</template>

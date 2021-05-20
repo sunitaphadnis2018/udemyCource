@@ -1,0 +1,17 @@
+<template>
+    <div>
+        <lightning-card icon-name="utility:formula" title="Simple Calculator">
+        <lightning-input type="number"  name='number1' label="First number" style="width:200px" onchange={assignNumber}></lightning-input> </br>
+        <lightning-input type="number"  name='number2' label="Second number" onchange={assignNumber}></lightning-input></br></br>
+
+        <lightning-button-group>
+            <lightning-button label="Add" icon-name="utility:add" icon-position="right"></lightning-button>
+            <lightning-button label="Subtract" icon-name="utility:minimize_window" icon-position="right"></lightning-button>
+            <lightning-button label="Multiply" icon-name="utility:close" icon-position="right"></lightning-button>
+            <lightning-button label="Divide /" ></lightning-button>
+        </lightning-button-group>
+        </lightning-card>
+This {filedName}
+    </div>
+    
+</template>
