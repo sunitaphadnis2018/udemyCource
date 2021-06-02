@@ -1,7 +1,4 @@
 public with sharing class carListByType {
-    public carListByType() {
-
-    }
     @AuraEnabled (cacheable=true)
     public static List<Car__c> getCarsByType(String carTypeId){
         system.debug('cars===>'+[SELECT id, Name FROM Car__c where Car_Type__c = :carTypeId]);
